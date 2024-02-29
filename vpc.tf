@@ -52,14 +52,12 @@ resource "aws_route_table" "wireguard-vpc-route-table" {
 
 // WireGuard VPC Route Table Association 1
 resource "aws_route_table_association" "wireguard-vpc-route-table-assoc-1" {
-    count = 1
     subnet_id = aws_subnet.wireguard-vpc-subnet-1.id
     route_table_id = aws_route_table.wireguard-vpc-route-table.id
 }
 
 // WireGuard VPC Route Table Association 2
 resource "aws_route_table_association" "wireguard-vpc-route-table-assoc-2" {
-    count = 1
     subnet_id = aws_subnet.wireguard-vpc-subnet-2.id
     route_table_id = aws_route_table.wireguard-vpc-route-table.id
 }
